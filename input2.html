@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ID:211303 NAME:Zorro</title>
+    <style>
+            body{
+                background-color:beige;
+            }
+            input{
+                border-left-color: gray;
+                border-right-color: antiquewhite;
+                border-bottom-color: antiquewhite;
+                border-width: 2px;
+            }
+            div{
+                color: red;
+                font-size: 12px;
+            }
+            div.cse{
+                color: lightyellow; 
+                font-size: 20px;
+            }
+        </style>
+    <script>
+        function toUpperCase(inputId) {
+            var input = document.getElementById(inputId);
+            input.value = input.value.toUpperCase();
+        }
+
+        function phone() {
+            var phoneInput = document.getElementsByName("tel")[0];
+            var phoneRegex = /^\d{10}$/;
+            if (!phoneRegex.test(phoneInput.value)) {
+                alert("Please enter a valid phone number");
+                phoneInput.value = "";
+            }
+        }
+  function displayInfo() {
+   var firstName = document.getElementById("firstName").value;
+   var lastName = document.getElementById("lastName").value;
+   var email = document.getElementById("email").value;
+   var phone = document.getElementById("phone").value;
+   var dob = document.getElementById("dob").value;
+   var address = document.getElementById("address").value;
+   var city = document.getElementById("city").value;
+   var province = document.getElementById("province").value;
+   var zip = document.getElementById("zip").value;
+   var gender = document.querySelector('input[name="gender"]:checked').value;
+   var height = document.getElementById("height").value;
+   var weight = document.getElementById("weight").value;
+   var bloodType = document.getElementById("bloodType").value;
+   var allergies = document.getElementById("allergies").value;
+   var medications = document.getElementById("medications").value;
+
+   document.getElementById("displayFirstName").innerHTML = firstName;
+   document.getElementById("displayLastName").innerHTML = lastName;
+   document.getElementById("displayEmail").innerHTML = email;
+   document.getElementById("displayPhone").innerHTML = phone;
+   document.getElementById("displayDob").innerHTML = dob;
+   document.getElementById("displayAddress").innerHTML = address;
+   document.getElementById("displayCity").innerHTML = city;
+   document.getElementById("displayprovince").innerHTML = province;
+   document.getElementById("displayZip").innerHTML = zip;
+   document.getElementById("displayGender").innerHTML = gender;
+   document.getElementById("displayHeight").innerHTML = height;
+   document.getElementById("displayWeight").innerHTML = weight;
+   document.getElementById("displayBloodType").innerHTML = bloodType;
+   document.getElementById("displayAllergies").innerHTML = allergies;
+   document.getElementById("displayMedications").innerHTML = medications;  
+  } 
+</script>
+ </script>
+</head>
+    <style>
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Patient Information</h1>
+    <form>
+
+        <label for="name">First Name:</label><br>
+        <input type="text"  id="name" oninput="toUpperCase()"><br>
+
+        <label for="name">Last Name:</label><br>
+        <input type="text"  id="name" oninput="toUpperCase()"><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" required>
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" name="tel" onblur="phone()" required>
+
+        <label for="address">Address:</label>
+        <textarea id="address" required></textarea>
+
+        <label for="birthdate">Birthdate:</label>
+        <input type="date" id="birthdate" required>
+
+        <label for="nationality">Nationality:</label>
+        <input type="text" id="nationality" required>
+
+        <label for="passport">Passport Number:</label>
+        <input type="text" id="passport" required>
+
+        <label for="bloodType">Blood Type:</label>
+        <input type="text" id="bloodType" required>
+
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" required>
+
+        <label for="height">Height (cm):</label>
+        <input type="number" id="height" required>
+
+        <label for="allergies">Allergies:</label>
+        <input type="text" id="allergies" required>
+
+        <label for="medications">Current Medications:</label>
+        <input type="text" id="medications" required>
+
+        <label for="emergencyContact">Emergency Contact:</label>
+        <input type="text" id="emergencyContact" required>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        
+                
+                
+            
+            function phone(){
+                if(document.a.tel.value.length<5 || document.a.tel.value.length>10){
+                    alert("Phone Number Should has 5-10 Characters");
+                }
+            }
+        
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get form values
+            var name = document.getElementById('name').value;
+            var age = document.getElementById('age').value;
+            var gender = document.getElementById('gender').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var address = document.getElementById('address').value;
+            var birthdate = document.getElementById('birthdate').value;
+            var nationality = document.getElementById('nationality').value;
+            var passport = document.getElementById('passport').value;
+            var bloodType = document.getElementById('bloodType').value;
+            var weight = document.getElementById('weight').value;
+            var height = document.getElementById('height').value;
+            var allergies = document.getElementById('allergies').value;
+            var medications = document.getElementById('medications').value;
+            var emergencyContact = document.getElementById('emergencyContact').value;
+
+            // Display submitted values
+            alert("Name: " + name);
+            alert("Age: " + age);
+            alert("Gender: " + gender);
+            alert("Email: " + email);
+            alert("Phone: " + phone);
+            alert("Address: " + address);
+            alert("Birthdate: " + birthdate);
+            alert("Nationality: " + nationality);
+            alert("Passport Number: " + passport);
+            alert("Blood Type: " + bloodType);
+            alert("Weight: " + weight);
+            alert("Height: " + height);
+            alert("Allergies: " + allergies);
+            alert("Current Medications: " + medications);
+            alert("Emergency Contact: " + emergencyContact);.getElementById
+        });
+    </script>
+    <h2>Displaying User Information:</h2>
+ <p>First Name: <span id="displayFirstName"></span></p >
+ <p>Last Name: <span id="displayLastName"></span></p >
+ <p>Email: <span id="displayEmail"></span></p >
+ <p>Phone: <span id="displayPhone"></span></p >
+ <p>Date of Birth: <span id="displayDob"></span></p >
+ <p>Address: <span id="displayAddress"></span></p >
+ <p>City: <span id="displayCity"></span></p >
+ <p>province: <span id="displayprovince"></span></p >
+ <p>Zip Code: <span id="displayZip"></span></p >
+ <p>Gender: <span id="displayGender"></span></p >
+ <p>Height: <span id="displayHeight"></span></p >
+ <p>Weight: <span id="displayWeight"></span></p >
+ <p>Blood Type: <span id="displayBloodType"></span></p >
+ <p>Allergies: <span id="displayAllergies"></span></p >
+ <p>Medications: <span id="displayMedications"></span></p >
+</body>
+</html>
